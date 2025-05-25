@@ -1,25 +1,25 @@
 # 🧠 ChatAI Platform
 
-Интерактивное веб-приложение на базе **FastAPI**, **Streamlit** и **Ollama**, предоставляющее удобный интерфейс для общения с локальной языковой моделью.
+An interactive web application built with **FastAPI**, **Streamlit**, and **Ollama**, providing a user-friendly interface for conversing with a local language model.
 
-## 🚀 Возможности
+## 🚀 Features
 
-- 🔐 Регистрация и аутентификация пользователей  
-- 💬 Общение с локальной LLM через FastAPI (Ollama)  
-- 📝 Сохранение истории сообщений и диалогов в PostgreSQL  
-- 🧠 Автоматическая генерация названий чатов на основе первого сообщения  
-- 📊 Интуитивный UI на Streamlit
+- 🔐 User registration and authentication  
+- 💬 Chat with a local LLM via FastAPI (Ollama)  
+- 📝 Persistent storage of message and conversation history in PostgreSQL  
+- 🧠 Automatic generation of conversation titles from the first user message  
+- 📊 Intuitive UI powered by Streamlit
 
-## ⚙️ Технологии
+## ⚙️ Technology Stack
 
 - **Backend:** FastAPI, SQLAlchemy, Alembic  
 - **Frontend:** Streamlit  
-- **LLM:** Ollama (локально)  
-- **База данных:** PostgreSQL + asyncpg  
-- **Аутентификация:** JWT, passlib[bcrypt]  
+- **LLM:** Ollama (self-hosted)  
+- **Database:** PostgreSQL + asyncpg  
+- **Authentication:** JWT, passlib[bcrypt]  
 
-## 🛡️ Безопасность
+## 🛡️ Security
 
-- Пароли хранятся в зашифрованном виде с помощью `bcrypt`  
-- Эндпоинты защиты через `Depends(get_current_user)`  
-- JWT-токены с подписью на секретном ключе
+- Passwords hashed using `bcrypt`  
+- Protected endpoints via `Depends(get_current_user)`  
+- Signed JWT tokens using a secret key
